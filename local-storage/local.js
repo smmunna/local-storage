@@ -8,5 +8,20 @@ const submit = () =>{
     if(emailValue=='' && passwordValue==''){
         alert('Nothing entered here...!');
     }
+    else{
+        const userDetails = {
+            email:emailValue,
+            password:passwordValue
+        }
+       
+        const userDetailsString = JSON.stringify(userDetails)
+        // console.log(userDetailsString)
+
+        // const userDetailsObj = JSON.parse(userDetailsString);
+        // console.log(userDetailsObj);
+        localStorage.setItem('UserDetails',userDetailsString);
+
+        // getting the item as obj
+    }
     // console.log(emailValue,passwordValue);
 }
